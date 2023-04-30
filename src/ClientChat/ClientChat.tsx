@@ -10,7 +10,9 @@ import {
     TitleContainer, 
     Title, 
     Content,
-    PoweredBy
+    PoweredBy,
+    CompanyLogo,
+    PoweredByContainer
 } from "./styled-components";
 
 // COMPONENTS
@@ -85,7 +87,7 @@ const ClientChat = () => {
             <Shadow />
 
             <Content>
-                <img src={ logoUrl == "" ? "https://storage.googleapis.com/orion-client-chat/static/logo_o.png" : logoUrl} style={{ width: "11rem", marginTop: "4rem" }}/>
+                <CompanyLogo src={ logoUrl == "" ? "https://storage.googleapis.com/orion-client-chat/static/logo_o.png" : logoUrl}/>
 
                 <ChatWrapper>
                     <TitleContainer backgroundColor={headerBgColor} darkerColor={headerDarkerBgColor}>
@@ -95,10 +97,10 @@ const ClientChat = () => {
                     <MessageInput submitMessage={(msgTxt) => submitMessage(msgTxt, true)} disabled={disableMsgInput} sendButtonBg={headerBgColor}/>
                 </ChatWrapper>
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: "4rem", opacity: 0.41 }}>
+                <PoweredByContainer>
                     <PoweredBy>Artificial Intelligence Powered by:</PoweredBy>
                     <img src="https://storage.googleapis.com/orion-client-chat/static/ORION_METAL.png" style={{ width: "4.5rem"}}/>
-                </Box>
+                </PoweredByContainer>
 
                 
             </Content>

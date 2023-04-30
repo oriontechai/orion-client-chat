@@ -95,7 +95,7 @@ export const TitleContainer = styled.div<TitleContainerProps>`
     align-items: center;
     justify-content: center;
     @media (min-width: 640px) {
-        width: 102%;
+        width: 105%;
         margin-left: -1rem;
         padding-right: 1rem;    
     }

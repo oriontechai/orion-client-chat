@@ -9,6 +9,8 @@ This creates an embedded js file that has to be deployed to a cdn.
 
 The project is using Google Cloud Storage as CDN. There is a bucket named orion-client-chat
 
+Always change the name of the .js file in the folder (orion-chat-widget-static.js)
+
 For uploading the js file use the next command
 ```
 gsutil -m rsync -r ./dist/assets gs://orion-client-chat/static
@@ -20,7 +22,7 @@ Embedding code is:
 ```html
     <div id="orion-client-chat-widget"></div>
     
-    <script type="text/javascript" src="https://storage.googleapis.com/orion-client-chat/static/index-789d2cde.js" data-clientId="AAAABBBBCCCCDDDD "></script>
+    <script type="text/javascript" src="https://storage.googleapis.com/orion-client-chat/static/orion-chat-widget-static.js" data-clientId="AAAABBBBCCCCDDDD"></script>
 ```
 
 Vite config is needed for the creation of only one static file creation:

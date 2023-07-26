@@ -26,11 +26,15 @@ export const MessageWrapper = styled.div`
     justify-content: space-between;
     align-items: flex-end;
     max-width: 200px;
-    @media (min-width: 700px){
-        max-width: 410px;
-    }
-    padding: 0.5rem/* 8px */;
+    padding: 0.1rem;
     word-break: break-word;
+    @media (min-width: 700px){
+        max-width: 310px;
+    }
+    @media (min-width: 1200px){
+        max-width: 410px;
+        padding: 0.5rem;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -45,9 +49,13 @@ interface TextProps{
 export const Text = styled.p<TextProps>`
     font-family: 'Jost', sans-serif;
     min-width: 2.4rem;
-    font-size: 1rem/* 14px */;
+    font-size: 0.8rem;
     line-height: 1.25rem/* 20px */;
     margin-right: 0.5rem;
-    margin: 3px;
+    margin: 0;
     color: ${ props => !props.isFromUser ? '#141414' : '#FEFEFE'};
+    @media (min-width: 1200px) {
+        margin: 3px;
+        font-size: 1rem/* 14px */;
+    }
 `;

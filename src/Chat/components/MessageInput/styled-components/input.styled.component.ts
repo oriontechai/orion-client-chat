@@ -4,7 +4,9 @@ export const MessageInputWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    min-height: 55px;
+    @media (min-width: 1200px) {
+        min-height: 55px;
+    }
 `;
 
 export const InputContainer = styled.div`
@@ -25,12 +27,15 @@ export const Input = styled.input`
     outline: 2px solid transparent;
     margin-left: 15px;
     outline-offset: 2px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     caret-color: #4b5563;
     flex: 1 1 0%;
-    border-width: 0px;
-    border-radius: 9999px;
+    border: 0 !important;
+    padding: 0 !important;
     color: #141414;
+    @media (min-width: 1200px) {
+        font-size: 1rem;
+    }
 `;
 
 interface SendButtonProps{
@@ -44,13 +49,16 @@ export const SendButton = styled.button<SendButtonProps>`
     justify-content: center;
     align-items: center;
     border-radius: 9999px;
-    margin-left: 1.5rem/* 12px */;
-    padding: 0.5rem 0.9rem/* 8px */;
+    margin-left: 0.8rem/* 12px */;
     border: 0;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     &:hover{
         filter: brightness(1.25);
         transform: scale(1.05);
         transition-duration: 400ms;
+    }
+    @media (min-width: 1200px) {
+        margin-left: 1.5rem/* 12px */;
+        padding: 0.5rem 0.9rem/* 8px */;
     }
 `;

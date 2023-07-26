@@ -1,7 +1,7 @@
 import { FlexCenter, ScreenWrapper } from './styled.component';
 import styled from 'styled-components';
 import { keyframes } from '@mui/styled-engine-sc';
-import logo from '../../assets/orion_black.png';
+const logo = 'https://storage.googleapis.com/orion-client-chat/static/orion_black.png';
 
 const rotate = keyframes`
     from {
@@ -26,7 +26,7 @@ const LoadingComponent = () => {
     return (
         <ScreenWrapper>
             <FlexCenter style={{ height: "100%" }}>
-                <Rotate src={logo} />
+                <Rotate src={logo}/>
             </FlexCenter>
         </ScreenWrapper>
     );

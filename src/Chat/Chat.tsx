@@ -26,11 +26,12 @@ import {
 } from "./styled.component";
 import MessageInput from "./components/MessageInput/MessageInput";
 import LoadingComponent from "./components/LoadingComponent/LoadingComponent";
-import aiGifSlow from './assets/aiGifSlow.gif';
-import aiGifFast from './assets/aiGifFast.gif';
-import blackAiBg from './assets/black_ai_bg.jpg';
-import white_logo from './assets/logo_o.png';
-import orion_metal from './assets/ORION_METAL.png';
+
+const aiGifSlow = 'https://storage.googleapis.com/orion-client-chat/static/aiGifSlow.gif';
+const aiGifFast = 'https://storage.googleapis.com/orion-client-chat/static/aiGifFast.gif';
+const blackAiBg = 'https://storage.googleapis.com/orion-client-chat/static/black_ai_bg.jpg';
+const white_logo = 'https://storage.googleapis.com/orion-client-chat/static/logo_o.png';
+const orion_metal = 'https://storage.googleapis.com/orion-client-chat/static/ORION_METAL.png';
 
 interface ChatUiDataDto{
     companyName: string;
@@ -127,7 +128,7 @@ const Chat = ({ jwtToken, baseUrl } : ChatProps) => {
 
                                     <ChatSidebarBox>
                                         <PoweredBy>Artificial Intelligence Powered by:</PoweredBy>
-                                        <img src={orion_metal} style={{ width: "4.5rem" }} />
+                                        <img src={orion_metal} style={{ width: "3.5rem" }} />
                                     </ChatSidebarBox>
 
                                 </ChatSidebarContent>
